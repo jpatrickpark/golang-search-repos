@@ -26,12 +26,10 @@ import (
 )
 
 type Foo struct {
-	//Description string
 	Imported []string
 }
 
 type Bar struct {
-	//Description string
 	Query string `json:"query"`
 	Hits  []struct {
 		Package string `json:"package"`
@@ -40,14 +38,12 @@ type Bar struct {
 }
 
 type PackageApiResult struct {
-	//Description string
 	Package    string `json:"Package"`
 	StarCount  int    `json:"StarCount"`
 	ProjectURL string `json:"ProjectURL"`
 }
 
 type CustomResult struct {
-	//Description string
 	Package   string `json:"package"`
 	Author    string `json:"author"`
 	StarCount int    `json:"StarCount"`
