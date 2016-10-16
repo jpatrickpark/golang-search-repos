@@ -25,18 +25,6 @@ import (
 	"strings"
 )
 
-type Foo struct {
-	Imported []string
-}
-
-type Bar struct {
-	Query string `json:"query"`
-	Hits  []struct {
-		Package string `json:"package"`
-		Author  string `json:"author"`
-	} `json:hits`
-}
-
 type PackageApiResult struct {
 	Package    string `json:"Package"`
 	StarCount  int    `json:"StarCount"`
@@ -47,6 +35,18 @@ type CustomResult struct {
 	Package   string `json:"package"`
 	Author    string `json:"author"`
 	StarCount int    `json:"StarCount"`
+}
+
+type Foo struct {
+	Imported []string
+}
+
+type Bar struct {
+	Query string `json:"query"`
+	Hits  []struct {
+		Package string `json:"package"`
+		Author  string `json:"author"`
+	} `json:hits`
 }
 
 func getJson(url string, target interface{}) error {
